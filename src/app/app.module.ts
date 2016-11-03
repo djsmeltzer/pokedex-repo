@@ -5,16 +5,20 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { PokedexService } from './pokedex.service';
+import { CapializePipe } from './capialize.pipe';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CapializePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PokedexService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
