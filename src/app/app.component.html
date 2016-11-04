@@ -9,7 +9,7 @@
       </div>
       <img [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true" [attr.src]="p.sprite">
       <div class="pokedex-pokemon-name">
-        {{ p.name | capitalize }}
+        {{ p.name | capialize }}
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
   <button class="load-button" (click)="loadMore()" [disabled]="isLoading">
     <span *ngIf="!error">
       <span *ngIf="isLoading">Loading...</span>
-      <span *ngId="!isLoading">Load more</span>
+      <span *ngIf="!isLoading">Load more</span>
     </span>
     <span *ngIf="error">
       Loading failed
